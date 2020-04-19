@@ -18,7 +18,31 @@ APRENDA A TRABALHAR COM O GERENCIADO DE DEPENDÊNCIAS DO PHP, PARA BAIXAR PACOTE
 
 ## <a name="parte1">1 - 01 - Iniciando com o Composer </a>
 
+- https://getcomposer.org/
 
+```
+composer init
+```
+
+```json
+{
+    "name": "eti/curso-php-composer",
+    "description": "Curso de PHP Composer",
+    "authors": [
+        {
+            "name": "josemalcher",
+            "email": "contato@josemalcher.net"
+        }
+    ],
+    "require": {}
+}
+
+```
+
+
+```
+composer install
+```
 
 [Voltar ao Índice](#indice)
 
