@@ -142,7 +142,51 @@ var_dump($controller->index());
 
 ## <a name="parte4">4 - 04 - Composer require e require-dev</a>
 
+```json
+{
+  "name": "eti/curso-php-composer",
+  "description": "Curso de PHP Composer",
+  "authors": [
+    {
+      "name": "josemalcher",
+      "email": "contato@josemalcher.net"
+    }
+  ],
+  "require": {
+    "monolog/monolog": "^2.0",
+    "php": ">=7"
+  },
+  "autoload": {
+    "files": [
+      "app/Helppers/function.php"
+    ],
+    "classmap": [
+      "classUtils/ClassUtils.php",
+      "Configs/"
+    ],
+    "psr-4": {
+      "ETI\\": "src/eti/",
+      "APP\\": "app/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.1"
+  }
+}
 
+```
+
+```
+composer require monolog/monolog
+```
+
+```
+composer require phpunit/phpunit --dev 
+```
+
+```
+composer update --no-dev
+```
 
 [Voltar ao Índice](#indice)
 
