@@ -99,7 +99,41 @@ var_dump($controller->index());
 
 ## <a name="parte3">3 - 03 - Autoload Composer files e classmap</a>
 
+- app/Helppers/function.php 
+- classUtils/ClassUtils.php
 
+```json
+{
+    "name": "eti/curso-php-composer",
+    "description": "Curso de PHP Composer",
+    "authors": [
+        {
+            "name": "josemalcher",
+            "email": "contato@josemalcher.net"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "app/Helppers/function.php"
+        ],
+        "classmap": [
+            "classUtils/ClassUtils.php",
+            "Configs/"
+        ],
+        "psr-4": {
+            "ETI\\":"src/eti/",
+            "APP\\": "app/"
+        }
+    }
+}
+
+
+```
+
+```
+    composer dump-autoload
+```
 
 [Voltar ao Índice](#indice)
 

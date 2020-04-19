@@ -9,6 +9,13 @@
     ],
     "require": {},
     "autoload": {
+        "files": [
+            "app/Helppers/function.php"
+        ],
+        "classmap": [
+            "classUtils/ClassUtils.php",
+            "Configs/"
+        ],
         "psr-4": {
             "ETI\\":"src/eti/",
             "APP\\": "app/"
