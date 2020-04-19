@@ -195,7 +195,15 @@ composer update --no-dev
 
 ## <a name="parte5">5 - 05 - Composer Versões de Pacotes</a>
 
-
+  - versions
+  - range
+  - range (hyphen)
+  - wildcard
+  - Tilde
+  - Caret
+  - Stability
+  - Minimum Stability
+    
 
 [Voltar ao Índice](#indice)
 
@@ -204,7 +212,27 @@ composer update --no-dev
 
 ## <a name="parte6">6 - 06 - Utilizando um Pacote (DOMPDF)</a>
 
+```
+composer require dompdf/dompdf
+```
 
+```php
+// reference the Dompdf namespace
+use Dompdf\Dompdf;
+
+// instantiate and use the dompdf class
+$dompdf = new Dompdf();
+$dompdf->loadHtml('hello world');
+
+// (Optional) Setup the paper size and orientation
+$dompdf->setPaper('A4', 'landscape');
+
+// Render the HTML as PDF
+$dompdf->render();
+
+// Output the generated PDF to Browser
+$dompdf->stream();
+```
 
 [Voltar ao Índice](#indice)
 
