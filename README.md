@@ -51,7 +51,46 @@ composer install
 
 ## <a name="parte2">2 - 02 - Composer Autoload PSR-4</a>
 
+```json
+{
+    "name": "eti/curso-php-composer",
+    "description": "Curso de PHP Composer",
+    "authors": [
+        {
+            "name": "josemalcher",
+            "email": "contato@josemalcher.net"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ETI\\":"src/eti/",
+            "APP\\": "app/"
+        }
+    }
+}
 
+```
+
+```
+    composer dump-autoload
+```
+
+```php
+<?php
+
+require '../vendor/autoload.php';
+
+use APP\Controllers\HomeController;
+
+$query = new \ETI\DB\Query;
+var_dump($query->query());
+
+//$controller = new \APP\Controllers\HomeController;
+$controller = new HomeController; // com uso de "use"
+var_dump($controller->index());
+
+```
 
 [Voltar ao Índice](#indice)
 
